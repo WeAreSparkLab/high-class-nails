@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>High Class Nails — Ber Street, Norwich</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14100d;
+    --cream:#f4ecdd;
+    --brick:#a6503d;
+    --brick-deep:#7d3a2c;
+    --brick-tint:#ece0d3;
+    --brass:#c6a24c;
+    --polish:#9c2b2b;
+    --line: rgba(20,16,13,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Libre Franklin', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:0.04em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--cream);
+    padding:3.5rem 1.5rem 0;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:960px;
+    margin:0 auto;
+    text-align:center;
+    padding-bottom:3rem;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:1.4rem;
+  }
+  .hero h1{
+    font-size:clamp(3.2rem, 12vw, 7.5rem);
+    line-height:0.92;
+    margin:0;
+    font-weight:400;
+  }
+  .hero h1 span{display:block;}
+  .hero-tagline{
+    max-width:34rem;
+    margin:1.6rem auto 0;
+    font-size:1.05rem;
+    line-height:1.55;
+    color:rgba(244,236,221,0.82);
+  }
+  .cta-row{
+    display:flex;
+    gap:0.9rem;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:2.2rem;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.85rem 1.6rem;
+    border-radius:999px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border:1px solid transparent;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--polish); color:var(--cream);}
+  .btn-primary:hover{background:#b53434;}
+  .btn-ghost{border-color:rgba(244,236,221,0.35); color:var(--cream);}
+  .btn-ghost:hover{background:rgba(244,236,221,0.08);}
+
+  .brick-strip{
+    height:34px;
+    width:100%;
+    background:
+      repeating-linear-gradient(90deg,
+        var(--brick) 0 58px,
+        var(--brick-deep) 58px 60px),
+      repeating-linear-gradient(0deg,
+        transparent 0 16px,
+        rgba(0,0,0,0.18) 16px 18px);
+    background-blend-mode:multiply, normal;
+    border-top:1px solid rgba(0,0,0,0.35);
+  }
+
+  /* ---------- SECTION shell ---------- */
+  section{padding:4.5rem 1.5rem;}
+  .section-inner{max-width:960px; margin:0 auto;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    border-bottom:1px solid var(--line);
+    padding-bottom:1rem;
+    margin-bottom:2.2rem;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 5vw, 2.8rem);
+    margin:0;
+    font-weight:400;
+  }
+  .section-head .mono{
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--brick-deep);
+  }
+
+  /* ---------- SERVICES (ticket board) ---------- */
+  .services{background:var(--brick-tint);}
+  .service-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem 3rem;
+  }
+  .service-col-title{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--brick-deep);
+    border-bottom:2px solid var(--brass);
+    padding-bottom:0.5rem;
+    margin-bottom:0.9rem;
+  }
+  .service-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.65rem 0;
+    border-bottom:1px dashed var(--line);
+    font-size:1.02rem;
+  }
+  .service-item:last-child{border-bottom:none;}
+  .service-item .dot{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--brass);
+    font-size:0.7rem;
+  }
+  .price-note{
+    margin-top:1.8rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    color:var(--brick-deep);
+  }
+  @media (max-width:640px){
+    .service-cols{grid-template-columns:1fr;}
+  }
+
+  /* ---------- SIGNATURE: polish wall ---------- */
+  .polish-wall{background:var(--ink); color:var(--cream);}
+  .polish-wall .section-head{border-bottom-color:rgba(244,236,221,0.18);}
+  .polish-wall .section-head .mono{color:var(--brass);}
+  .polish-grid{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:3rem;
+    align-items:center;
+  }
+  .hand{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    align-items:flex-end;
+    padding:2rem 1rem;
+    background:rgba(244,236,221,0.04);
+    border:1px solid rgba(244,236,221,0.12);
+    border-radius:16px;
+  }
+  .nail{
+    width:26px;
+    height:64px;
+    border-radius:14px 14px 6px 6px;
+    background:var(--polish);
+    box-shadow: inset 0 -8px 14px rgba(0,0,0,0.18);
+    transition:background 0.35s ease;
+  }
+  .nail:nth-child(1){height:52px;}
+  .nail:nth-child(3){height:70px;}
+  .nail:nth-child(5){height:46px;}
+  .swatches{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem;
+    margin-bottom:1.2rem;
+  }
+  .swatch{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:2px solid rgba(244,236,221,0.25);
+    cursor:pointer;
+    transition:transform 0.15s ease, border-color 0.15s ease;
+    padding:0;
+  }
+  .swatch:hover, .swatch:focus-visible{transform:scale(1.1); border-color:var(--cream); outline:none;}
+  .swatch.active{border-color:var(--brass); transform:scale(1.12);}
+  .shade-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.95rem;
+    letter-spacing:0.04em;
+    color:var(--cream);
+  }
+  .shade-name span{color:var(--brass);}
+  .polish-caption{
+    margin-top:1.6rem;
+    font-size:0.92rem;
+    color:rgba(244,236,221,0.6);
+    max-width:32rem;
+  }
+  @media (max-width:640px){
+    .polish-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- FIND US ---------- */
+  .find-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+  }
+  .hours-table{width:100%; border-collapse:collapse; font-size:1rem;}
+  .hours-table td{padding:0.55rem 0; border-bottom:1px dashed var(--line);}
+  .hours-table td:first-child{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; letter-spacing:0.05em; color:var(--brick-deep);}
+  .hours-table td:last-child{text-align:right;}
+  .hours-table tr.closed td:last-child{color:var(--brick); font-weight:600;}
+  .contact-block{margin-top:1.8rem; display:flex; flex-direction:column; gap:0.6rem;}
+  .contact-block a{
+    text-decoration:none;
+    font-size:1rem;
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+  }
+  .contact-block a:hover{color:var(--brick);}
+  .map-wrap{
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    aspect-ratio:4/3;
+  }
+  .map-wrap iframe{width:100%; height:100%; border:0;}
+  @media (max-width:768px){
+    .find-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:rgba(244,236,221,0.55);
+    text-align:center;
+    padding:2.2rem 1.5rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.04em;
+  }
+  footer a{color:var(--cream); text-decoration:none; border-bottom:1px solid rgba(244,236,221,0.3);}
+  footer a:hover{border-color:var(--cream);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">81 Ber Street · Norwich · NR1 3EY</div>
+    <h1 class="display"><span>High Class</span><span>Nails</span></h1>
+    <p class="hero-tagline">A Ber Street nail studio doing manicures, pedicures and nail art for everyone who walks in — ladies and gentlemen alike.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+447828805568">☎ Call to Book</a>
+      <a class="btn btn-ghost" href="#find-us">Find Us</a>
+    </div>
+  </div>
+  <div class="brick-strip" aria-hidden="true"></div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 class="display">On the menu</h2>
+      <span class="mono">Treatments</span>
+    </div>
+    <div class="service-cols">
+      <div>
+        <div class="service-col-title">Hands</div>
+        <div class="service-item"><span>Manicure</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Men's Manicure</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Gel Nails</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Gel Nail Extensions</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Acrylic Nails</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Dip Powder Nails</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Nail Extensions</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Nail Art</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Nail Polish</span><span class="dot">···</span></div>
+      </div>
+      <div>
+        <div class="service-col-title">Feet</div>
+        <div class="service-item"><span>Pedicure</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Men's Pedicure</span><span class="dot">···</span></div>
+        <div class="service-item"><span>Manicure &amp; Pedicure</span><span class="dot">···</span></div>
+      </div>
+    </div>
+    <p class="price-note">// Ask in salon for current pricing — call ahead on 07828 805568</p>
+  </div>
+</section>
+
+<!-- SIGNATURE: POLISH WALL -->
+<section class="polish-wall">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 class="display">Pick a shade</h2>
+      <span class="mono">Try it on</span>
+    </div>
+    <div class="polish-grid">
+      <div class="hand" aria-hidden="true">
+        <div class="nail" id="nail1"></div>
+        <div class="nail" id="nail2"></div>
+        <div class="nail" id="nail3"></div>
+        <div class="nail" id="nail4"></div>
+        <div class="nail" id="nail5"></div>
+      </div>
+      <div>
+        <div class="swatches" role="group" aria-label="Polish shades">
+          <button class="swatch active" style="background:#9c2b2b" data-color="#9c2b2b" data-name="Polish Red" aria-label="Polish Red"></button>
+          <button class="swatch" style="background:#14100d" data-color="#14100d" data-name="Ber Street Black" aria-label="Ber Street Black"></button>
+          <button class="swatch" style="background:#f4ecdd" data-color="#f4ecdd" data-name="High Class Cream" aria-label="High Class Cream"></button>
+          <button class="swatch" style="background:#a6503d" data-color="#a6503d" data-name="Brick Lane Terracotta" aria-label="Brick Lane Terracotta"></button>
+          <button class="swatch" style="background:#c6a24c" data-color="#c6a24c" data-name="Norwich Brass" aria-label="Norwich Brass"></button>
+          <button class="swatch" style="background:#d98fa0" data-color="#d98fa0" data-name="Sunday Off Blush" aria-label="Sunday Off Blush"></button>
+        </div>
+        <div class="shade-name">Now wearing — <span id="shadeLabel">Polish Red</span></div>
+        <p class="polish-caption">Six house shades, one set of hands. This is the kind of small interactive touch we build into every SparkLab demo — swap it for a real booking widget, gallery, or before/after slider once it's live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section id="find-us">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 class="display">Find us</h2>
+      <span class="mono">Ber Street</span>
+    </div>
+    <div class="find-grid">
+      <div>
+        <table class="hours-table">
+          <tr><td>Mon</td><td>9:30am – 5:30pm</td></tr>
+          <tr><td>Tue</td><td>9:30am – 5:30pm</td></tr>
+          <tr><td>Wed</td><td>9:30am – 5:30pm</td></tr>
+          <tr><td>Thu</td><td>9:30am – 5:30pm</td></tr>
+          <tr><td>Fri</td><td>9:30am – 5:30pm</td></tr>
+          <tr><td>Sat</td><td>9:30am – 5:30pm</td></tr>
+          <tr class="closed"><td>Sun</td><td>Closed</td></tr>
+        </table>
+        <div class="contact-block">
+          <a href="tel:+447828805568">☎ 07828 805568</a>
+          <a href="https://maps.google.com/?daddr=81%20Ber%20St%2C%20Norwich%20NR1%203EY%2C%20United%20Kingdom" target="_blank" rel="noopener">📍 81 Ber St, Norwich NR1 3EY</a>
+          <a href="https://www.facebook.com/HighClassNailsNorwich/" target="_blank" rel="noopener">📘 Facebook — @HighClassNailsNorwich</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=81+Ber+St,+Norwich+NR1+3EY&output=embed" loading="lazy" title="Map to High Class Nails"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built by <a href="https://wearesparklab.com/studio" target="_blank" rel="noopener">WeAreSparkLab</a>
+</footer>
+
+<script>
+  const swatches = document.querySelectorAll('.swatch');
+  const nails = document.querySelectorAll('.nail');
+  const label = document.getElementById('shadeLabel');
+  swatches.forEach(sw => {
+    sw.addEventListener('click', () => {
+      swatches.forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      const color = sw.getAttribute('data-color');
+      nails.forEach(n => n.style.background = color);
+      label.textContent = sw.getAttribute('data-name');
+    });
+  });
+</script>
+
+</body>
+</html>
